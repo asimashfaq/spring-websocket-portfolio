@@ -1,13 +1,9 @@
 
-if [ -z "$TOMCAT8_HOME" ]; then
-    echo -e "\n\nPlease set TOMCAT8_HOME\n\n"
-    exit 1
-fi
 
 mvn -U -DskipTests clean package
 
-rm -rf $TOMCAT8_HOME/webapps/spring-websocket-portfolio*
+rm -rf /Library/Tomcat//webapps/spring-websocket-portfolio*
 
-cp target/spring-websocket-portfolio.war $TOMCAT8_HOME/webapps/
+cp target/spring-websocket-portfolio.war /Library/Tomcat//webapps/
 
-$TOMCAT8_HOME/bin/startup.sh
+/Library/Tomcat//bin/startup.sh
