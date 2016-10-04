@@ -2,8 +2,8 @@
 
 mvn -U -DskipTests clean package
 
-rm -rf /Library/Tomcat//webapps/spring-websocket-portfolio*
+rm -rf /opt/tomcat/webapps/spring-websocket-portfolio*
 
-cp target/spring-websocket-portfolio.war /Library/Tomcat//webapps/
+cp target/spring-websocket-portfolio.war /opt/tomcat/webapps/
 
-/Library/Tomcat//bin/startup.sh
+/opt/tomcat/bin/startup.sh
