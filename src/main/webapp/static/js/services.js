@@ -13,6 +13,9 @@ angular.module('springPortfolio.services', [])
                 }
             },
             connect: function () {
+
+                stompClient.heartbeat.outgoing = 3000; // client will send heartbeats every 20000ms
+                stompClient.heartbeat.incoming = 3000;
                 return $q(function (resolve, reject) {
                     if (!stompClient) {
                         reject("STOMP client not created");
